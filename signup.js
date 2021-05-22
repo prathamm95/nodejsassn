@@ -13,8 +13,6 @@ const connection = mysql.createConnection({
     database: "nodejs"
 });
 
-
-// connect to the database
 connection.connect(function(error){
     if (error) throw error
     else console.log("connected to the database successfully!")
@@ -42,12 +40,3 @@ app.post("/",encoder, function(req,res){
         return  res.status(200).send(results);
     })
 })
-
-// when login is success
-app.get("/welcome",function(req,res){
-    res.sendFile(__dirname + "/welcome.html")
-})
-
-
-// set app port 
-app.listen(4000);
