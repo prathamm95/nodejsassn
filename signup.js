@@ -1,7 +1,5 @@
 const mysql = require("mysql");
 const express = require("express");
-const bodyParser = require("body-parser");
-const encoder = bodyParser.urlencoded();
 
 const app = express();
 app.use("/assets",express.static("assets"));
@@ -28,7 +26,7 @@ app.get("/",function(req,res){
     })
 })
 
-app.post("/",encoder, function(req,res){
+app.post("/", function(req,res){
     var username = req.body.username;
     var userpass = req.body.userpass;
 
