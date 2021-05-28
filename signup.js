@@ -38,3 +38,5 @@ app.post("/", function(req,res){
         return  res.status(200).send(results);
     })
 })
+
+app.listen(4000);
